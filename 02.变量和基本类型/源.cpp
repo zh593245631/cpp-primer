@@ -1,4 +1,5 @@
 #include<iostream>
+#include"Sales_item.h"
 
 using namespace std;
 
@@ -52,17 +53,31 @@ void test4()
 //struct Foo
 //{}
 
-class Sales_data
-{
-	std::string BookNo;
-	unsigned long count = 0;
-	double pice = 0.0;
 
-};
 int main()
 {
 	//test1();
 	//test2();
 	//test3();
+	Sales_data data;
+	Sales_data d;
+	if (cin >> d.BookNo&&cin>>d.count&&cin>>d.pice) {
+		d.pice = d.pice * d.count;
+		while (cin >> data.BookNo && cin >> data.count && cin >> data.pice)
+		{
+			if (d.BookNo == data.BookNo) {
+				d.pice += data.pice*data.count;
+				d.count += data.count;
+			}
+			else {
+				cout << d.BookNo << " " << d.count << " " << d.pice << " " << d.pice / d.count << endl;
+				d.BookNo = data.BookNo;
+				d.count = data.count;
+				d.pice = data.pice * data.count;
+			}
+		}
+		cout << d.BookNo << " " << d.count << " " << d.pice << " " << d.pice / d.count << endl;
+	}
+	//cout << d.BookNo << " " << d.count << " " << d.pice << " " << d.pice / d.count << endl;
 	return 0;
 }
