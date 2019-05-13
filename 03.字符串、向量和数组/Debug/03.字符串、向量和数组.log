@@ -1,2 +1,5 @@
 ﻿  源.cpp
+F:\cpp-primer\03.字符串、向量和数组\源.cpp(126): warning C4018: “<”: 有符号/无符号不匹配
+F:\cpp-primer\03.字符串、向量和数组\源.cpp(324): warning C4101: “a”: 未引用的局部变量
+F:\cpp-primer\03.字符串、向量和数组\源.cpp(327): warning C4101: “c”: 未引用的局部变量
   03.字符串、向量和数组.vcxproj -> F:\cpp-primer\03.字符串、向量和数组\Debug\03.字符串、向量和数组.exe
