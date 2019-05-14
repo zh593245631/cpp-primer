@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
 #include<string>
 
@@ -311,6 +312,16 @@ int size()
 {
 	return 1;
 }
+void test12()
+{
+	char a[] = "Hello";
+	char b[] = "World";
+
+	char c[11];
+
+	strcpy(c, a);
+	strcat(c, b);
+}
 int main()
 {
 	//vector<string> s(10, "null");
@@ -321,10 +332,15 @@ int main()
 	//test10();
 	//test11();
 
-	int a[2 * 2];
-	//int b[size()];
-	constexpr size_t n = 10;
-	int c[n];
+	//int a[2 * 2];
+	////int b[size()];
+	//constexpr size_t n = 10;
+	//int c[n];
+	//int arr[] = { 1,2,3,4 };
+	//int* p = &arr[2];
+	//int* q = p;
 
+	//p += p - q;
+	test12();
 	return 0;
 }
