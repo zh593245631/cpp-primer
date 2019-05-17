@@ -29,29 +29,56 @@ using namespace std;
 //	return 0;
 //}
 
-double _div(int a, int b)
-{
-	if (b == 0)
-		throw "0不能为除数";
-	return (double)a / b;
-}
+//double _div(int a, int b)
+//{
+//	if (b == 0)
+//		throw "0不能为除数";
+//	return (double)a / b;
+//}
+//int main()
+//{
+//	int a, b;
+//
+//	while (cin >> a >> b)
+//	{
+//		try {
+//			double ans = _div(a, b);
+//			cout << ans << endl;
+//		}
+//		catch (const char* e) {
+//			cout << e << endl;
+//			cout << "try again? y or n" << endl;
+//			char c;
+//			cin >> c;
+//			if (c == 'n' || !c)break;
+//		}
+//	}
+//	return 0;
+//}
+
+
 int main()
 {
-	int a, b;
+	string s;
+	string ans;
+	string cur;
+	int maxcount = 1;
+	int count = 1;
 
-	while (cin >> a >> b)
+	while (cin >> s)
 	{
-		try {
-			double ans = _div(a, b);
-			cout << ans << endl;
+		if (s == cur)++count;
+		else {
+			if (maxcount < count) {
+				maxcount = count;
+				ans = cur;
+			}
+			cur = s;
+			count = 1;
 		}
-		catch (const char* e) {
-			cout << e << endl;
-			cout << "try again? y or n" << endl;
-			char c;
-			cin >> c;
-			if (c == 'n' || !c)break;
-		}
+
 	}
+	cout << ans << endl;
+	cout << maxcount << endl;
 	return 0;
 }
