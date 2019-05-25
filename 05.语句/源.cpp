@@ -62,11 +62,12 @@ int main()
 	string s;
 	string ans;
 	string cur;
-	int maxcount = 1;
-	int count = 1;
+	int maxcount = 0;
+	int count = 0;
 
 	while (cin >> s)
 	{
+
 		if (s == cur)++count;
 		else {
 			if (maxcount < count) {
@@ -77,6 +78,12 @@ int main()
 			count = 1;
 		}
 
+	}
+	
+	//最后一组数据
+	if (maxcount < count) {
+		maxcount = count;
+		ans = cur;
 	}
 	cout << ans << endl;
 	cout << maxcount << endl;
